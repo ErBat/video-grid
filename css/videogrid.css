@@ -1,0 +1,149 @@
+.cross{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cross span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #444;
+  border-radius: 0;
+  opacity: 1;
+  left: 0;
+  bottom: 50%;
+}
+
+.cross span:nth-child(1){
+  -webkit-transform: translateY(50%) rotate(45deg);
+  -moz-transform: translateY(50%) rotate(45deg);
+  -o-transform: translateY(50%) rotate(45deg);
+  transform: translateY(50%) rotate(45deg);
+}
+
+.cross span:nth-child(2){
+  -webkit-transform: translateY(50%) rotate(-45deg);
+  -moz-transform: translateY(50%) rotate(-45deg);
+  -o-transform: translateY(50%) rotate(-45deg);
+  transform: translateY(50%) rotate(-45deg);
+}
+
+ img{
+  width: 100%;
+  height: 400px;
+}
+
+ #video-modal .modal-header{
+  background-color: $primary-color;
+}
+
+.video-grid{
+  padding-top: 50px;
+}
+
+ .video-grid div{
+  margin-bottom: 30px;
+  max-height: 400px;
+}
+
+ .video-item{
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+ .overlay{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+ .overlay:hover{
+  opacity: 1;
+  transition: .3s ease;
+}
+
+ .video-item .overlay .description {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+ .video-item .overlay .description h2{
+  font-size: 36px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+ .video-item .overlay .description h2::after{
+  content: '';
+  font-size: 36px;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 576px){
+   #video-modal .modal-dialog {
+      max-width: 80%;
+      height: 100%;
+      max-height: 700px;
+  }
+}
+
+ #video-modal .modal-content {
+  height: 100%;
+  max-height: 700px;
+}
+
+ #video-modal .modal-header{
+  border-bottom: 0;
+}
+
+ #video-modal .modal-body{
+  padding: 0;
+}
+
+ #video-modal iframe {
+  display: block;
+}
+
+ #video-modal .modal-body .row{
+  height: 100%;
+  margin: 0;
+}
+
+ #video-modal .modal-body .row .video-frame{
+  padding: 0;
+}
+
+ #video-modal .modal-body .row .video-description{
+  padding: 20px;
+}
+
+ #video-modal .video-description h2{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+ #video-modal .video-description p{
+  font-size: 18px;
+}
