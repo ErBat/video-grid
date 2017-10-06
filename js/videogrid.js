@@ -9,7 +9,7 @@ $(document).ready(function() {
   function vidInfoSender(that){
     var url = "https://www.youtube.com/embed/" + that.attr("video-url").replace("https://www.youtube.com/watch?v=", "");;
     var title = that.attr("video-title");
-    var text = that.attr(".video-description");
+    var text = that.attr("video-description");
     if ( modalIframe.length ) {
       modalIframe.attr('src',url);
       modalTitle.html(title);
